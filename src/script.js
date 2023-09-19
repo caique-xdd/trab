@@ -1,8 +1,8 @@
 // Referências do DOM - HTML
 
 // Função de cotação do Bitcoin
-const btnClick = document.getElementById('btnClick');
-const lblValor = document.getElementById('lblValor');
+const btnClick = document.getElementById("btnClick")
+const lblValor = document.getElementById("lblValor")
 
 const apiBTC = axios.create({
   baseURL: "https://www.mercadobitcoin.net/api/BTC/ticker/",
@@ -10,7 +10,7 @@ const apiBTC = axios.create({
 async function consulta() {
   const response = await apiBTC.get()
   //console.log(response.data.ticker.buy);
-  const b = Math.round(response.data.ticker.buy * 100)/100
+  const b = Math.round(response.data.ticker.buy * 100) / 100
   lblValor.innerHTML = "R$ " + b.toLocaleString("pt-BR")
 }
 btnClick.onclick = () => {
@@ -18,37 +18,39 @@ btnClick.onclick = () => {
 }
 
 // Função de consultar taxa selic
-const lblS = document.getElementById('lblS');
+const lblS = document.getElementById("lblS")
 
 const apiNS = axios.create({
-  baseURL: "https://api.hgbrasil.com/finance/taxes?format=json-cors&key=4b309b17"
+  baseURL:
+    "https://api.hgbrasil.com/finance/taxes?format=json-cors&key=4b309b17",
 })
 async function consultaS() {
   const responseS = await apiNS.get()
   console.log(responseS.data.results[0].selic)
+  lblS.innerHTML = responseS.data.results[0].selic + "%"
 }
 btnTempo.onclick = () => {
   consultaS()
 }
 
 // Função da consulta do CEP
-const btnCEP = document.getElementById('btnCEP');
-const conCEP = document.getElementById('conCEP');
-const lblBairro = document.getElementById('lblBairro');
-const lblCidade = document.getElementById('lblCidade');
-const lblLogra = document.getElementById('lblLogra');
-const lblUF = document.getElementById('lblUF');
+const btnCEP = document.getElementById("btnCEP")
+const conCEP = document.getElementById("conCEP")
+const lblBairro = document.getElementById("lblBairro")
+const lblCidade = document.getElementById("lblCidade")
+const lblLogra = document.getElementById("lblLogra")
+const lblUF = document.getElementById("lblUF")
 
 const apiCEP = axios.create({
-  baseURL: `https://viacep.com.br/ws/`
+  baseURL: `https://viacep.com.br/ws/`,
 })
 async function consultaCEP() {
-    const CEP = conCEP.value;
-    const responseCEP = await apiCEP.get(CEP + '/json/')
-    lblBairro.innerHTML = responseCEP.data.bairro
-    lblCidade.innerHTML = responseCEP.data.localidade
-    lblLogra.innerHTML = responseCEP.data.logradouro
-    lblUF.innerHTML = responseCEP.data.uf
+  const CEP = conCEP.value
+  const responseCEP = await apiCEP.get(CEP + "/json/")
+  lblBairro.innerHTML = responseCEP.data.bairro
+  lblCidade.innerHTML = responseCEP.data.localidade
+  lblLogra.innerHTML = responseCEP.data.logradouro
+  lblUF.innerHTML = responseCEP.data.uf
 }
 btnCEP.onclick = () => {
   consultaCEP()
