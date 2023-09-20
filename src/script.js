@@ -72,5 +72,4 @@ btnDr.onclick = () => {
   consultaDr()
 }
 
-//https://pt.stackoverflow.com/questions/76640/existe-alguma-api-que-liste-estados-e-cidades
-//https://www.geonames.org/6252001/united-states.html
+//penes
