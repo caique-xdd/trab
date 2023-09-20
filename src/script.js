@@ -72,4 +72,3 @@ btnDr.onclick = () => {
   consultaDr()
 }
 
-//penes
