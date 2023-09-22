@@ -71,4 +71,4 @@ async function consultaDr() {
 btnDr.onclick = () => {
   consultaDr()
 }
-//xd
+
