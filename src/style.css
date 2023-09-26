@@ -61,3 +61,9 @@ input::-webkit-inner-spin-button {
     height: 100px;
     width: 265px;
 }
+button{
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+    border-radius: 8px;
+}
