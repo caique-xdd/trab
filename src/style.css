@@ -5,9 +5,20 @@ body *{
     font-family: 'Inter', sans-serif;
     color: rgba(255, 255, 255, 0.85);
 }
+input{
+    color:black;
+}
 body {
     background: url(/assets/bg-desktop.jpg) no-repeat top center/cover;
 }
+:root{
+    --pad: 25px 110px 150px 110px;
+    --com: 100px;
+    --lar: 265px;
+}
+
+
+
 #cs{
     display: flex;
     flex-direction: row;
@@ -25,56 +36,47 @@ body {
     margin-right: 150px;
 }
 .container1{
-    background-position: center;
-    border: 5px solid rgba(255, 255, 255, 0.5)
-
-}
-.container2{
-    background-position: center;
-    border: 5px solid rgba(255, 255, 255, 0.5)
-
-}
-.container3{
-    background-position: center;
-    border: 5px solid rgba(255, 255, 255, 0.5)
-}
-.container4{
-    background-position: center;
-    border: 5px solid rgba(255, 255, 255, 0.5)
-}
-
-
-.container1{
     text-align: center;
-    padding: 25px 110px 150px 110px;
-    height: 100px;
-    width: 265px;
+    background-position: center;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    padding: var(--pad);
+    width: var(--lar);
+    height: var(--com);
 }
 .container2{
     text-align: center;
-    padding: 25px 110px 150px 110px;
-    height: 100px;
-    width: 265px;
+    background-position: center;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    padding: var(--pad);
+    width: var(--lar);
+    height: var(--com);
 }
 .container3{
     text-align: center;
-    padding: 25px 110px 250px 110px;
-    height: 100px;
-    width: 265px;
-} 
+    background-position: center;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    padding: var(--pad);
+    width: var(--lar);
+    height: var(--com);
+}
 .container4{
     text-align: center;
-    padding: 25px 110px 150px 110px;
-    height: 100px;
-    width: 265px;
+    background-position: center;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    padding: var(--pad);
+    width: var(--lar);
+    height: var(--com);
 }
+
+
 a{
-    padding: 16px 24px;
+    padding: 8px 12px;
     background: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.2s;
+    font-size: 14px;
 }
 a:hover {
   background: rgba(255, 255, 255, 0.05);
