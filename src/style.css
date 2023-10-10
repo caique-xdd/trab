@@ -4,12 +4,13 @@ input::-webkit-inner-spin-button {
 body *{
     font-family: 'Inter', sans-serif;
     color: rgba(255, 255, 255, 0.85);
+    
 }
 input{
     color:black;
 }
 body {
-    background: url(/assets/bg-desktop.jpg) no-repeat top center/cover;
+    background: url(../assets/back_g.png) no-repeat top center/cover;
 }
 :root{
     --pad: 25px 110px 150px 110px;
@@ -83,3 +84,7 @@ a:hover {
   border: 1.5px solid white;
 }
 
+
+#btnCEP a:visited{
+    color: red;
+}

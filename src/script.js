@@ -26,7 +26,7 @@ const apiNS = axios.create({
 })
 async function consultaS() {
   const responseS = await apiNS.get()
-  console.log(responseS.data.results[0].selic)
+  console.log(responseS)
   lblS.innerHTML = responseS.data.results[0].selic + "%"
 }
 btnTempo.onclick = () => {
